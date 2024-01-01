@@ -25,5 +25,12 @@ pipeline {
       }
     }
 
+    stage('build') {
+      steps {
+        sh '''docker build -f curriculum-front/Dockerfile . -t dore00mon/curriculum-front
+'''
+      }
+    }
+
   }
 }
